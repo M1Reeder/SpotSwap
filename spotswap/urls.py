@@ -10,6 +10,9 @@ v1_api = Api(api_name='v1')
 v1_api.register(UserResource())
 v1_api.register(EntryResource())
 
+#from myapp.api import EntryResource
+#entry_resource = EntryResource()
+
 urlpatterns = patterns('',
     (r'^location/', include('spotmanager.urls')),
     (r'^api/', include(v1_api.urls)),
